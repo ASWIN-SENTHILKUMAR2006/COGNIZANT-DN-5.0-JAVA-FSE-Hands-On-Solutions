@@ -19,7 +19,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 public class CoffeMakerTest {
 
 //Arrange
-	
+																			//stubbing --MOCKITO PHASE -01
 @Mock
 Sugar sugar;
 
@@ -39,6 +39,7 @@ public void MakeCoffeeTest() {
 boolean result = coffeeMachine.MakeCoffee();
 
 //Assert 
+																		//verifying --MOCKITO PHASE -02
 Assertions.assertEquals(true,result,"Coffee was not made -- returned false");
 verify(sugar,times(1)).addSugar();
 verify(coffee,times(1)).addCoffee();//never()
