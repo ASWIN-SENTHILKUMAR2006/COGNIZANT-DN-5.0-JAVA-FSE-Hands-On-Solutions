@@ -20,7 +20,7 @@ public  boolean MakeCoffee() {
 	sugar.addSugar();
 	boolean isCoffeeAdded = coffee.addCoffee();
 	System.out.println( "Coffee is done");
-	return true;
+	return isCoffeeAdded;
 }
 
 
