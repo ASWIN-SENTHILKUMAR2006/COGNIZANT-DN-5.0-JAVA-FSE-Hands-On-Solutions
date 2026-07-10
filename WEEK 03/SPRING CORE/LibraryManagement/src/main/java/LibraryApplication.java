@@ -25,7 +25,7 @@ public class LibraryApplication {
 
         service.displayService();
 
-        repository.displayRepository();
+     //   repository.displayRepository();
 
     }
 }
