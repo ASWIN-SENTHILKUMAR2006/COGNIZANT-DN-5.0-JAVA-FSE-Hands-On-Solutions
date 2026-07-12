@@ -14,8 +14,10 @@ public class BookService {
 		this.repo = repo;
 	}
 	
-	public void displayService() {
+	public String displayService(String User) {
+		 System.out.println("User: "+User);
         System.out.println("Book Service is working.");
         repo.displayRepository();
+        return User;
     }
 }

@@ -5,10 +5,26 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>LibraryManagement</name>
   <dependencies>
-  <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>6.1.8</version>
-        </dependency>
+  <!-- Core Spring Context  -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>6.1.11</version> <!-- Match your current Spring version -->
+</dependency>
+
+<!-- Spring AOP Module -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-aop</artifactId>
+    <version>6.1.11</version> <!-- Match your current Spring version -->
+</dependency>
+
+<!-- AspectJ Weaver (Required for pointcut parsing and matching) -->
+<dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>1.9.22.1</version> 
+</dependency>
+
   </dependencies>
 </project>
