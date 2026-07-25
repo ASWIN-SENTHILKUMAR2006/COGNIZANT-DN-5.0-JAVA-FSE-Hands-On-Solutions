@@ -1,0 +1,125 @@
+# ==========================================
+# STEP 1: Git Setup & Configuration
+# ==========================================
+
+git --version
+git config --global user.name "ASWIN SENTHILKUMAR"
+git config --global user.email "aswinsenthilkumarcse@gmail.com"
+git config --global --list
+
+# ==========================================
+# STEP 2: Integrate Notepad++ as Default Editor
+# ==========================================
+
+notepad++
+git config --global core.editor "notepad++.exe"
+git config --global -e
+
+# ==========================================
+# STEP 3: Add File to Repository
+# ==========================================
+
+git init GitDemo
+cd GitDemo
+Get-ChildItem -Force
+
+echo "Welcome to the version control !!" > welcome.txt
+Get-ChildItem -Force
+Get-Content welcome.txt
+git status
+
+# Stage and commit welcome.txt
+
+git add welcome.txt
+git commit -m "welcome file created"
+git status
+
+# Connect to Remote & Push Initial Commit
+
+git remote add origin https://github.com/ASWIN-SENTHILKUMAR2006/GitDemo.git
+git remote -v
+git push -u origin master
+
+# ==========================================
+# LAB 2: Git Ignore Setup
+# ==========================================
+
+mkdir log
+New-Item log\dailylogs.log -ItemType File
+
+# Add rule to ignore .log files and log folder
+
+echo "*.log" > .gitignore
+echo "log/" >> .gitignore
+
+git status
+git add .gitignore
+git commit -m "Git hands-on 2"
+git status
+
+# ==========================================
+# LAB 3: Branching & Merging
+# ==========================================
+
+git branch GitNewBranch
+git branch -a
+git checkout GitNewBranch
+
+echo "Branch Content" > branchFile.txt
+git add branchFile.txt
+git commit -m "Files commited in branch"
+git status
+
+git checkout master
+git diff master GitNewBranch
+git merge GitNewBranch
+git log --oneline --graph --decorate
+git branch -d GitNewBranch
+git status
+
+# ==========================================
+# LAB 4: Merge Conflict Resolution
+# ==========================================
+
+git status
+
+git branch
+git checkout -b GitWork
+echo "<hello>Gitwork Version</hello>" > hello.xml
+git status
+git add hello.xml
+git commit -m "branch hello.xml"
+
+
+git checkout master
+echo "<title> GIT Hands-On </title>"  > hello.xml
+git add hello.xml
+git commit -m "master --file on master"
+git log --oneline --graph --decorate --all
+
+# Trigger Conflict & Resolve
+
+git merge GitWork
+git status
+
+git add hello.xml
+git commit -m "Resolved merge Conflict"
+git log --oneline --graph --decorate --all
+
+
+git status
+git branch
+git branch -d GitWork
+
+# ==========================================
+# LAB 5: Clean Up & Push to Remote
+# ==========================================
+
+git status
+git branch
+git pull origin master
+git push origin master
+git remote -v
+
+
+GithUb Repo:  https://github.com/ASWIN-SENTHILKUMAR2006/GitDemo.git
