@@ -1,4 +1,4 @@
-<h1 align="center"> COGNIZANT DN 5.0 Hands-On Exercises /h1>
+<h1 align="center"> COGNIZANT DN 5.0 Hands-On Exercises </h1>
 
 <h1 align="center">JAVA - REACT TRACK</h1>
 
