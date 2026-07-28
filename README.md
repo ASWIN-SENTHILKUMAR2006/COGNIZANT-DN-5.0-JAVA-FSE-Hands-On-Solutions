@@ -1,4 +1,4 @@
-# COGNIZANT DN 5.0 Hands-On Exercises
+<h1 align="center"> COGNIZANT DN 5.0 Hands-On Exercises /h1>
 
 <h1 align="center">JAVA - REACT TRACK</h1>
 
@@ -15,7 +15,7 @@ This repository contains my hands-on exercises, practice implementations, and le
 
 ## <h2> Track </h2>
 
-**Java - React**
+<h2>**Java - React** </h2>
 
 ## Author
 
